@@ -1,20 +1,26 @@
-import React from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Thumbnails from "./components/Thumbnails";
-import Footer from "./components/Footer";
-import LoginModal from "./components/LoginModal";
- // import "./assets/style.css";
+import { Routes, Route } from "react-router-dom";
+import DemoLogin from "./pages/DemoLogin";
+import Dashboard from "./pages/Dashboard";
+import PrivateRoute from "./routes/PrivateRoute";
+import "./assets/style.css";
+
 
 function App() {
   return (
-    <div className="landing_body">
-      <Header />
-      <Hero />
-      <Thumbnails />
-      <Footer />
-      <LoginModal />
-    </div>
+    <Routes>
+      {/* Demo Login Page */}
+      <Route path="/" element={<DemoLogin />} />
+
+      {/* Protected Dashboard */}
+      <Route
+        path="/dashboard"
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
 }
 
