@@ -1,0 +1,23 @@
+import React from "react";
+
+export default function Footer() {
+  return (
+    <footer className="homefooter container mt-5">
+      <h3>
+        Players are requested not to contact any untrusted sources for
+        tiger365.pro accounts.
+      </h3>
+
+      <h4>This site is operated by tigerexch</h4>
+
+      <hr />
+
+      <ul className="fmenus">
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Responsible Gaming</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </footer>
+  );
+}
